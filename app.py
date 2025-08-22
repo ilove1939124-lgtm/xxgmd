@@ -50,3 +50,7 @@ def health():
 if __name__ == "__main__":
     # 0.0.0.0 方便局域网测试；只在本机可用的话可以换成 127.0.0.1
     app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
